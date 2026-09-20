@@ -1,4 +1,3 @@
-
 /* ================================
    PRICING PAGE
 ================================ */
@@ -49,16 +48,53 @@
 }
 
 /* Pricing Card */
+/* Pricing Card */
 .pricing-card {
     position: relative;
     display: flex;
     flex-direction: column;
+
+    height: 100%;
     padding: 38px 32px;
+
     background: rgba(30, 41, 59, 0.9);
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 22px;
+
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+
     transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Features */
+.pricing-card ul {
+    flex: 1;
+
+    padding: 0;
+    margin: 0 0 30px;
+
+    list-style: none;
+}
+
+/* Choose Plan Button */
+.pricing-card .btn {
+    display: block;
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 14px 5px;
+
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #082f49;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .pricing-card:hover {
@@ -69,11 +105,9 @@
 /* Featured Plan */
 .pricing-card.featured-plan {
     border: 2px solid #38bdf8;
-    background: linear-gradient(
-        145deg,
-        rgba(14, 116, 144, 0.35),
-        rgba(30, 41, 59, 0.95)
-    );
+    background: linear-gradient(145deg,
+            rgba(14, 116, 144, 0.35),
+            rgba(30, 41, 59, 0.95));
 }
 
 /* Popular Badge */
@@ -117,7 +151,7 @@
 }
 
 /* Description */
-.pricing-card > p {
+.pricing-card>p {
     min-height: 50px;
     margin-bottom: 25px;
     color: #cbd5e1;

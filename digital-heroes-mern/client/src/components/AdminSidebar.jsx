@@ -23,6 +23,11 @@ const AdminSidebar = () => {
             icon: "💳",
         },
         {
+            title: "Manage Plans",
+            path: "/admin/plans",
+            icon: "💰",
+        },
+        {
             title: "Manage Draws",
             path: "/admin/draws",
             icon: "🎲",
@@ -81,7 +86,7 @@ const AdminSidebar = () => {
 
                 <button
                     className="logout-button"
-                    onClick={handleLogout}
+                    onClick={() => navigate("/admin/login")}
                 >
                     🚪 Logout
                 </button>

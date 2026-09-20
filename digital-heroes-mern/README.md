@@ -207,3 +207,17 @@ server.js
 package.json
 
 .env
+
+
+
+To start backend 
+   npm run dev
+
+
+To start frontend 
+   nom start
+
+to create super admin
+  node script\createsuperAdmin
+
+  

@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import "../styles/pricing.css";
 
 function Pricing() {
+    const { user } = useAuth();
+
     const plans = [
         {
             name: "Monthly",
@@ -69,18 +72,30 @@ function Pricing() {
                             ))}
                         </ul>
 
-                        <Link
-                            to="/register"
-                            className="btn btn-primary"
-                        >
-                            Choose Plan
-                        </Link>
+                        {/* Show button based on login status */}
+                        {user ? (
+                            <Link
+                                to="/subscription"
+                                state={{ selectedPlan: plan }}
+                                className="btn btn-primary"
+                            >
+                                Choose Plan
+                            </Link>
+                        ) : (
+                            <Link
+                                to="/login"
+                                className="btn btn-primary"
+                            >
+                                Login to Choose Plan
+                            </Link>
+                        )}
                     </div>
                 ))}
             </section>
 
             <section className="pricing-note">
                 <h3>Charity Contribution</h3>
+
                 <p>
                     Your selected charity contribution percentage can be
                     configured during subscription setup.

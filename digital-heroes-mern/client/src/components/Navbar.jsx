@@ -73,7 +73,7 @@ const Navbar = () => {
                             </NavLink>
 
                             <Link
-                                to="/register"
+                                to="/signup"
                                 className="register-button"
                                 onClick={closeMenu}
                             >

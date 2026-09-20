@@ -110,6 +110,39 @@ exports.getUsers = async (req, res) => {
   }
 };
 
+exports.deleteUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    // Prevent deleting admin accounts (optional)
+    // if (user.role === "admin") {
+    //   return res.status(403).json({
+    //     success: false,
+    //     message: "Admin user cannot be deleted",
+    //   });
+    // }
+
+    await User.findByIdAndDelete(req.params.id);
+
+    res.status(200).json({
+      success: true,
+      message: "User deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 exports.updateUserStatus = async (req, res) => {
   try {
     const { isActive } = req.body;

@@ -86,7 +86,7 @@ function AppContent() {
                     />
 
                     <Route
-                        path="/register"
+                        path="/signup"
                         element={<Signup />}
                     />
 
