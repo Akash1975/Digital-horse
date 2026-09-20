@@ -1,0 +1,402 @@
+/* ========================================
+   HOME PAGE
+======================================== */
+
+.home-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.home-page .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 650px;
+    padding: 100px 24px;
+
+    text-align: center;
+    background:
+        radial-gradient(circle at 85% 15%,
+            #3730a3 0%,
+            transparent 40%),
+        linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.home-page .hero-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.home-page .hero-badge {
+    display: inline-block;
+
+    margin-bottom: 26px;
+    padding: 10px 20px;
+
+    border: 1px solid #6366f1;
+    border-radius: 50px;
+
+    color: #a5b4fc;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.home-page .hero-content h1 {
+    margin: 0 auto 25px;
+
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+.home-page .hero-content h1 span {
+    display: block;
+    margin-top: 8px;
+    color: #818cf8;
+}
+
+.home-page .hero-content p {
+    max-width: 680px;
+    margin: 0 auto 35px;
+
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.home-page .hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.home-page .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 165px;
+    padding: 14px 26px;
+
+    border-radius: 9px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.home-page .btn:hover {
+    transform: translateY(-3px);
+}
+
+.home-page .btn-primary {
+    background: #6366f1;
+    color: #ffffff;
+    box-shadow: 0 8px 20px #6366f133;
+}
+
+.home-page .btn-primary:hover {
+    background: #4f46e5;
+    box-shadow: 0 10px 25px #6366f155;
+}
+
+.home-page .btn-secondary {
+    border: 1px solid #64748b;
+    background: transparent;
+    color: #ffffff;
+}
+
+.home-page .btn-secondary:hover {
+    background: #334155;
+    border-color: #818cf8;
+}
+
+/* ========================================
+   COMMON SECTION HEADING
+======================================== */
+
+.home-page .section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.home-page .section-heading>span {
+    color: #818cf8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.home-page .section-heading h2 {
+    margin: 15px 0;
+
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.home-page .section-heading p {
+    margin: 0;
+
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   FEATURES SECTION
+======================================== */
+
+.home-page .features-section {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 95px 30px;
+}
+
+.home-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.home-page .feature-card {
+    padding: 30px;
+
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    background: #1e293b;
+    box-shadow: 0 10px 30px #00000018;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.home-page .feature-card:hover {
+    transform: translateY(-7px);
+    border-color: #6366f1;
+    box-shadow: 0 15px 35px #00000030;
+}
+
+.home-page .feature-card h3 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.home-page .feature-card p {
+    margin: 0;
+
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   HOW IT WORKS
+======================================== */
+
+.home-page .how-it-works {
+    width: 100%;
+    padding: 95px 30px;
+
+    background: #111827;
+}
+
+.home-page .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    max-width: 1190px;
+    margin: 0 auto;
+}
+
+.home-page .step-card {
+    padding: 30px;
+
+    border: 1px solid #334155;
+    border-radius: 16px;
+    background: #1e293b;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.home-page .step-card:hover {
+    transform: translateY(-5px);
+    border-color: #6366f1;
+}
+
+.home-page .step-card strong {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: #818cf8;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.home-page .step-card h3 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.home-page .step-card p {
+    margin: 0;
+
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   CTA SECTION
+======================================== */
+
+.home-page .cta-section {
+    padding: 105px 30px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center,
+            #312e81 0%,
+            transparent 65%),
+        #0f172a;
+}
+
+.home-page .cta-section h2 {
+    max-width: 800px;
+    margin: 0 auto 18px;
+
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.home-page .cta-section p {
+    margin: 0 auto 32px;
+
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+    .home-page .hero-section {
+        min-height: 580px;
+        padding: 85px 25px;
+    }
+
+    .home-page .features-grid,
+    .home-page .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-page .features-section,
+    .home-page .how-it-works {
+        padding: 75px 25px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    .home-page .hero-section {
+        min-height: 550px;
+        padding: 70px 20px;
+    }
+
+    .home-page .hero-badge {
+        padding: 8px 14px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .home-page .hero-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .home-page .hero-buttons {
+        flex-direction: column;
+    }
+
+    .home-page .btn {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .home-page .features-section,
+    .home-page .how-it-works {
+        padding: 65px 20px;
+    }
+
+    .home-page .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .home-page .section-heading p {
+        font-size: 14px;
+    }
+
+    .home-page .features-grid,
+    .home-page .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .feature-card,
+    .home-page .step-card {
+        padding: 25px;
+    }
+
+    .home-page .cta-section {
+        padding: 75px 20px;
+    }
+
+    .home-page .cta-section p {
+        font-size: 14px;
+    }
+}
