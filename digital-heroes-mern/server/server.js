@@ -80,7 +80,7 @@ const startServer = async () => {
     await connectDB();
 
     app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
+      console.log("Backend Is Running now ----->");
       console.log(`Health: http://localhost:${PORT}/api/health`);
     });
   } catch (error) {

@@ -107,6 +107,227 @@
         box-shadow 0.25s ease;
 }
 
+
+/* =========================================
+   WINNERS SECTION
+========================================= */
+
+.winners-section {
+    position: relative;
+    padding: 100px 7%;
+    /* background: linear-gradient(180deg,
+            #f2f6f3 0%,
+            #e8f1eb 100%); */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Decorative background */
+.winners-section::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(23, 107, 77, 0.06);
+    top: -120px;
+    left: -100px;
+    pointer-events: none;
+}
+
+.winners-section::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(11, 31, 26, 0.04);
+    bottom: -120px;
+    right: -90px;
+    pointer-events: none;
+}
+
+/* Heading */
+.winners-section .section-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.winners-section .section-heading>span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #176b4d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.winners-section .section-heading h2 {
+    margin: 0 0 14px;
+    color: #0b1f1a;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.winners-section .section-heading p {
+    margin: 0;
+    color: #718078;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Content */
+.winners-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 42px auto 0;
+}
+
+/* Winner Card */
+.winner-placeholder {
+    position: relative;
+    padding: 52px 35px;
+    /* background: rgba(255, 255, 255, 0.95); */
+    border: 1px solid #dce9e0;
+    border-radius: 24px;
+    box-shadow:
+        0 15px 45px rgba(11, 31, 26, 0.07),
+        0 3px 10px rgba(11, 31, 26, 0.03);
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.winner-placeholder:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 22px 55px rgba(11, 31, 26, 0.11),
+        0 5px 15px rgba(11, 31, 26, 0.04);
+}
+
+/* Trophy */
+.winner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    /* background: linear-gradient(135deg,
+            #fff5ce,
+            #fce7a0); */
+    border: 1px solid #f3d778;
+    font-size: 46px;
+    box-shadow: 0 8px 20px rgba(180, 140, 35, 0.12);
+    animation: trophyFloat 3s ease-in-out infinite;
+}
+
+.winner-placeholder h3 {
+    margin: 0 0 12px;
+    color: #0b1f1a;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.winner-placeholder p {
+    max-width: 400px;
+    margin: 0 auto 28px;
+    color: #718078;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Button */
+.winner-placeholder .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 26px;
+    border-radius: 10px;
+    background: linear-gradient(135deg,
+            #0b1f1a,
+            #176b4d);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(11, 31, 26, 0.12);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.winner-placeholder .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(11, 31, 26, 0.18);
+}
+
+/* Animation */
+@keyframes trophyFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .winners-section {
+        padding: 70px 20px;
+    }
+
+    .winners-content {
+        margin-top: 30px;
+    }
+
+    .winner-placeholder {
+        padding: 40px 22px;
+        border-radius: 20px;
+    }
+
+    .winner-icon {
+        width: 78px;
+        height: 78px;
+        font-size: 38px;
+    }
+
+    .winner-placeholder h3 {
+        font-size: 21px;
+    }
+
+    .winners-section .section-heading p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .winners-section {
+        padding: 55px 15px;
+    }
+
+    .winner-placeholder {
+        padding: 35px 18px;
+    }
+
+    .winner-placeholder .btn-primary {
+        width: 100%;
+    }
+}
+
 .home-page .btn:hover {
     transform: translateY(-3px);
 }

@@ -19,7 +19,7 @@ router.put("/profile", protect, updateProfile);
 
 // Admin routes
 router.get("/", protect, adminOnly, getUsers);
-router.get("/delete", protect, adminOnly, deleteUser);
+router.delete("/:id", protect, adminOnly, deleteUser);
 router.patch("/:id/status", protect, adminOnly, updateUserStatus);
 
 module.exports = router;

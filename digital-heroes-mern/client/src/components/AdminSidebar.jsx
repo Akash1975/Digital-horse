@@ -23,11 +23,6 @@ const AdminSidebar = () => {
             icon: "💳",
         },
         {
-            title: "Manage Plans",
-            path: "/admin/plans",
-            icon: "💰",
-        },
-        {
             title: "Manage Draws",
             path: "/admin/draws",
             icon: "🎲",

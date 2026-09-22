@@ -47,10 +47,10 @@ const ManageUsers = () => {
 
     // Delete User
     const deleteUser = async (userId, userRole) => {
-        if (userRole === "admin") {
-            setMessage("Admin user cannot be deleted.");
-            return;
-        }
+        // if (userRole === "admin") {
+        //     setMessage("Admin user cannot be deleted.");
+        //     return;
+        // }
 
         const confirmDelete = window.confirm(
             "Are you sure you want to delete this user?"

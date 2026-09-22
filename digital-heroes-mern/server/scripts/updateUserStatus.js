@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 
 const readline = require("readline");
@@ -19,17 +18,11 @@ const askQuestion = (question) => {
 const updateUserStatus = async () => {
   try {
     const userEmail = await askQuestion("Enter user email: ");
-    const statusInput = await askQuestion(
-      "Enter status (activate/deactivate): "
-    );
 
     const email = userEmail.toLowerCase().trim();
-    const status = statusInput.toLowerCase().trim();
 
-    if (!email || !["activate", "deactivate"].includes(status)) {
-      throw new Error(
-        "Enter a valid email and status (activate/deactivate)."
-      );
+    if (!email) {
+      throw new Error("Please enter a valid email.");
     }
 
     await connectDB();
@@ -40,16 +33,41 @@ const updateUserStatus = async () => {
       throw new Error("User not found.");
     }
 
+    // Show current user details and status
+    console.log("\n==============================");
+    console.log("        USER DETAILS");
+    console.log("==============================");
+    console.log("Name:", user.name);
+    console.log("Email:", user.email);
+    console.log(
+      "Current Status:",
+      user.isActive ? "Active ✅" : "Inactive ❌"
+    );
+    console.log("==============================\n");
+
+    const statusInput = await askQuestion(
+      "Enter status (activate/deactivate): "
+    );
+
+    const status = statusInput.toLowerCase().trim();
+
+    if (!["activate", "deactivate"].includes(status)) {
+      throw new Error(
+        "Invalid status. Enter activate or deactivate."
+      );
+    }
+
     user.isActive = status === "activate";
 
     await user.save();
 
-    console.log(
-      `\nUser ${status}d successfully!`
-    );
+    console.log(`\nUser ${status}d successfully!`);
     console.log("Name:", user.name);
     console.log("Email:", user.email);
-    console.log("Status:", user.isActive ? "Active ✅" : "Inactive ❌");
+    console.log(
+      "New Status:",
+      user.isActive ? "Active ✅" : "Inactive ❌"
+    );
 
     rl.close();
     process.exit(0);
